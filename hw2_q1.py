@@ -15,6 +15,7 @@ MORSE_CODE = {'A': '.-',     'B': '-...',   'C': '-.-.',
 
               '.': '.-.-.-', ',': '--..--', ':': '---...',
               "'": '.----.', '-': '-....-',
+              ' ': '\n'
               }
 
 
@@ -37,3 +38,26 @@ def english_to_morse(
         Name of output file containing the translated Morse code. Please don't change
         it since it's also hard-coded in the tests file.
     """
+
+    new_morse_code = {}
+    for key, val in MORSE_CODE.items():
+        new_morse_code[ord(key)] = val 
+        new_morse_code[ord(key.lower())] = val
+
+    file = open(input_file,'r')
+    data_read = file.read()
+    data_translated = data_read.translate(new_morse_code)
+    file.close()
+
+    o_file = open(output_file,'w')
+    o_file.write(data_translated)
+    o_file.close()
+
+    return data_translated
+
+if  __name__ == '__main__':
+    # Question 1
+    return_value = english_to_morse()
+    print(f"Question 1 solution: {return_value}")
+    
+

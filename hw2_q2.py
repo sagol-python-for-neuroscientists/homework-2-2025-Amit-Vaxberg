@@ -68,8 +68,8 @@ def should_promote(agent1, agent2):
 
 if  __name__ == '__main__':
     # Question 2
-    data0 = (Agent("Buddy", Condition.CURE), Agent("Holly", Condition.DEAD))
-    return_value = meetup(data0)
+    data1 = (Agent("Buddy", Condition.CURE), Agent("Holly", Condition.DEAD))
+    return_value = meetup(data1)
     print(f"Question 2 solution: {return_value}")
     
             

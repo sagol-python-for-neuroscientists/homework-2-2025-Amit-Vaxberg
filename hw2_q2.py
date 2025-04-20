@@ -71,7 +71,3 @@ if  __name__ == '__main__':
     data1 = (Agent("Buddy", Condition.CURE), Agent("Holly", Condition.DEAD))
     return_value = meetup(data1)
     print(f"Question 2 solution: {return_value}")
-    
-            
-    
-

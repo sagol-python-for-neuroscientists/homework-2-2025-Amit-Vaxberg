@@ -59,5 +59,3 @@ if  __name__ == '__main__':
     # Question 1
     return_value = english_to_morse()
     print(f"Question 1 solution: {return_value}")
-    
-
